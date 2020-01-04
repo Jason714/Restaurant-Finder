@@ -1,9 +1,6 @@
-.s3{
-    background-color: brown;
-    height: 800px;
-}
-
 .s9{
-    background-color: blue;
-    height: 800px;
+    background-color: lightblue;
+}
+.row {
+    margin-bottom: 0;
 }
