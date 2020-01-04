@@ -1,6 +1,20 @@
-.s9{
+.background{
     background-color: lightblue;
 }
 .row {
     margin-bottom: 0;
+}
+.carousel{
+    height: 470px;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0;
+}
+.col{
+    margin-left: px;
+    margin-right: 0;
+}
+img {
+    height: 400px;
 }
