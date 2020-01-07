@@ -1,20 +1,60 @@
-.background{
-    background-color: lightblue;
+* {
+    box-sizing: border-box;
 }
-.row {
-    margin-bottom: 0;
+
+body {
+    font-family: 'Inria Serif', serif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url(https://antonialoweinteriors.com/wp-content/uploads/2018/04/B.jpg);
 }
-.carousel{
+
+/**Navbar**/
+
+.brand-logo {
+    font-family: 'Dancing Script', cursive, Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 2%;
+    font-weight: 800;
+}
+
+li {
+    margin-right: 2%;
+}
+
+/**Main content**/
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/**Carousel**/
+
+.carousel-area {
+    background-image: linear-gradient(130deg, rgba(223, 230, 233, .6), rgba(178, 190, 195, .6), rgba(99, 110, 114, .6));
+    padding: 10px;
+}
+
+.carousel {
     height: 470px;
 }
-.row {
-    margin-left: 0px;
-    margin-right: 0;
+
+.car-content {
+    text-align: center;
 }
-.col{
-    margin-left: px;
-    margin-right: 0;
+
+/**Footer**/
+
+footer {
+    margin-bottom: 0;
 }
+
+.copyright {
+    margin-top: 30px;
+}
+
+.team {
+    margin-top: 30px;
+}
+
 img {
     height: 400px;
 }
