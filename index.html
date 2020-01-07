@@ -23,12 +23,17 @@
   <body>
     <nav class="nav-bar red">
       <div class="row">
-        <a class="brand-logo white-text">The Fine Diner</a>
+        <a href="index.html" class="brand-logo white-text nav-logo"
+          >The Fine Diner</a
+        >
         <div class="col s4 offset-s8">
           <ul class="hide-on-med-and-down">
             <li><span>Click to to search for fine dining near you</span></li>
             <li>
-              <button class="btn waves-effect waves-light" type="submit">
+              <button
+                data-target="modal1"
+                class="btn waves-effect waves-light modal-trigger"
+              >
                 Search
               </button>
             </li>
@@ -37,8 +42,42 @@
       </div>
     </nav>
 
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 class="brand-logo red-text">The Fine Diner</h4>
+        <p>
+          When performing a search keep in mind the results will depend on the
+          number of fine dining establishments in the area being searched. For
+          best results limit searches to major metropolitan areas
+        </p>
+        <input
+          type="text"
+          class="location grey lighten-3"
+          placeholder="Enter a city or major metroplitan area here"
+        />
+      </div>
+      <div class="modal-footer">
+        <a class="modal-close waves-effect waves-green btn-flat search"
+          >Search</a
+        >
+      </div>
+    </div>
+
+    <div class="container about">
+      <div class="row description">
+        <p>
+          Headed out for a night on the town and looking for the best places to
+          dine? Here at <span class="brand-logo">The Fine Diner </span> we
+          provide a search option that sifts through the clutter for you. Our
+          results only return restaurants with the highest ratings. Once you're
+          ready just click the search button at the top of the page to find
+          restaurants in a major metropolitan area near you.
+        </p>
+      </div>
+    </div>
+
     <div class="container carousel-area">
-      <div class="row">
+      <div class="row favs">
         <h4 class="white-text">A Few of Our Favorite Restaurants</h4>
         <div class="carousel carousel-slider">
           <div class="carousel-item">
@@ -46,6 +85,7 @@
               <div class="card horizontal">
                 <div class="card-image">
                   <img
+                    class="large"
                     src="https://media-cdn.tripadvisor.com/media/photo-s/01/59/82/06/lobster-on-a-bed-of-truffled.jpg"
                   />
                 </div>
@@ -53,10 +93,10 @@
                   <div class="card-content">
                     <h5>Le Bernardin</h5>
                     <ul>
-                      <li>French</li>
+                      <li>Cuisine type: French</li>
                       <li>New York City, New York</li>
-                      <li>$$$$ range: $41 - $90</li>
-                      <li>rating: 4.5</li>
+                      <li>Price range: $41 - $90</li>
+                      <li>Rating: 4.5</li>
                       <li>
                         Le Bernardin, Zagat's top pick for 2013, and awarded the
                         Michelin Guide's coveted 3-stars as well as The New York
@@ -66,7 +106,15 @@
                     </ul>
                   </div>
                   <div class="card-action">
-                    <a href="https://www.le-bernardin.com">Visit our website</a>
+                    <a href="https://www.le-bernardin.com" target="_blank"
+                      >Visit our website</a
+                    >
+                    <a
+                      class="right"
+                      href="https://www.tripadvisor.com/Restaurant_Review-g60763-d424434-Reviews-Le_Bernardin-New_York_City_New_York.html#REVIEWS"
+                      target="_blank"
+                      >Read our Reviews</a
+                    >
                   </div>
                 </div>
               </div>
@@ -78,6 +126,7 @@
               <div class="card horizontal">
                 <div class="card-image">
                   <img
+                    class="large"
                     src="https://media-cdn.tripadvisor.com/media/photo-s/12/67/53/6e/stone-crab.jpg"
                   />
                 </div>
@@ -85,10 +134,10 @@
                   <div class="card-content">
                     <h5>Joe's Seafood, Prime Steak & Stone Crab</h5>
                     <ul>
-                      <li>Steakhouse, American, Seafood</li>
+                      <li>Cuisine type: Steakhouse, American, Seafood</li>
                       <li>Chicago, Illinois</li>
-                      <li>$$$$ range: $41 - $80</li>
-                      <li>rating: 4.5</li>
+                      <li>Price range: $41 - $80</li>
+                      <li>Rating: 4.5</li>
                       <li>
                         Joe's Seafood, Prime Steak & Stone Crab is the
                         culmination of a partnership between Lettuce Entertain
@@ -98,8 +147,14 @@
                     </ul>
                   </div>
                   <div class="card-action">
-                    <a href="https://www.joes.net › chicago"
+                    <a href="https://www.joes.net/chicago" target="_blank"
                       >Visit our website</a
+                    >
+                    <a
+                      class="right"
+                      href="https://www.tripadvisor.com/Restaurant_Review-g35805-d427758-Reviews-Joe_s_Seafood_Prime_Steak_Stone_Crab-Chicago_Illinois.html#REVIEWS"
+                      target="_blank"
+                      >Read our Reviews</a
                     >
                   </div>
                 </div>
@@ -112,6 +167,7 @@
               <div class="card horizontal">
                 <div class="card-image">
                   <img
+                    class="large"
                     src="https://media-cdn.tripadvisor.com/media/photo-s/02/6e/5b/6a/welcome-to-gw-fins.jpg"
                   />
                 </div>
@@ -119,10 +175,10 @@
                   <div class="card-content">
                     <h5>GW Fins</h5>
                     <ul>
-                      <li>American, Seafood</li>
+                      <li>Cuisine type: American, Seafood</li>
                       <li>New Orleans, Louisiana</li>
-                      <li>$$$$ range: $50 - $58</li>
-                      <li>rating: 4.5</li>
+                      <li>Price range: $50 - $58</li>
+                      <li>Rating: 4.5</li>
                       <li>
                         Experience the cuisine that has created raving fans of
                         local diners and national and local food critics alike.
@@ -132,40 +188,14 @@
                     </ul>
                   </div>
                   <div class="card-action">
-                    <a href="https://gwfins.com">Visit our website</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div>
-              <div class="card horizontal">
-                <div class="card-image">
-                  <img
-                    src="https://media-cdn.tripadvisor.com/media/photo-s/0f/f3/2a/b1/dining-room.jpg"
-                  />
-                </div>
-                <div class="card-stacked">
-                  <div class="card-content">
-                    <h5>Parkway Grill</h5>
-                    <ul>
-                      <li>American, Contemporary</li>
-                      <li>Los Angeles, California</li>
-                      <li>$$$$ range: $31 - $80</li>
-                      <li>rating: 4.5</li>
-                      <li>
-                        Since 1984, Parkway Grill has specialized in a seasonal,
-                        market-driven approach to cooking that incorporates
-                        diverse influences and classic French technique.
-                        Demonstrating the ultimate commitment to fresh produce
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card-action">
-                    <a href="https://www.theparkwaygrill.com"
+                    <a href="https://gwfins.com" target="_blank"
                       >Visit our website</a
+                    >
+                    <a
+                      class="right"
+                      href="https://www.tripadvisor.com/Restaurant_Review-g60864-d426285-Reviews-GW_Fins-New_Orleans_Louisiana.html#REVIEWS"
+                      target="_blank"
+                      >Read our Reviews</a
                     >
                   </div>
                 </div>
@@ -178,6 +208,48 @@
               <div class="card horizontal">
                 <div class="card-image">
                   <img
+                    class="large"
+                    src="https://media-cdn.tripadvisor.com/media/photo-s/0f/f3/2a/b1/dining-room.jpg"
+                  />
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <h5>Parkway Grill</h5>
+                    <ul>
+                      <li>Cuisine type: American, Contemporary</li>
+                      <li>Los Angeles, California</li>
+                      <li>Price range: $31 - $80</li>
+                      <li>Rating: 4.5</li>
+                      <li>
+                        Since 1984, Parkway Grill has specialized in a seasonal,
+                        market-driven approach to cooking that incorporates
+                        diverse influences and classic French technique.
+                        Demonstrating the ultimate commitment to fresh produce
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-action">
+                    <a href="https://www.theparkwaygrill.com" target="_blank"
+                      >Visit our website</a
+                    >
+                    <a
+                      class="right"
+                      href="https://www.tripadvisor.com/Restaurant_Review-g32859-d343318-Reviews-Parkway_Grill-Pasadena_California.html#REVIEWS"
+                      target="_blank"
+                      >Read our Reviews</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div>
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img
+                    class="large"
                     src="https://media-cdn.tripadvisor.com/media/photo-f/0c/fe/e6/aa/photo0jpg.jpg"
                   />
                 </div>
@@ -185,10 +257,10 @@
                   <div class="card-content">
                     <h5>Quince</h5>
                     <ul>
-                      <li>French</li>
+                      <li>Cuisine type: French</li>
                       <li>San Francisco, California</li>
-                      <li>$$$$ range: $220 - $300</li>
-                      <li>rating: 4.5</li>
+                      <li>Price range: $220 - $300</li>
+                      <li>Rating: 4.5</li>
                       <li>
                         Situated in San Francisco's historic Jackson Square,
                         Lindsay and Chef Michael Tusk's celebrated Quince
@@ -199,7 +271,15 @@
                     </ul>
                   </div>
                   <div class="card-action">
-                    <a href="www.quincerestaurant.com">Visit our website</a>
+                    <a href="www.quincerestaurant.com" target="_blank"
+                      >Visit our website</a
+                    >
+                    <a
+                      class="right"
+                      href="https://www.tripadvisor.com/Restaurant_Review-g60713-d349411-Reviews-Quince-San_Francisco_California.html#REVIEWS"
+                      target="_blank"
+                      >Read our Reviews</a
+                    >
                   </div>
                 </div>
               </div>
@@ -208,91 +288,8 @@
         </div>
       </div>
 
-      <div class="row hide">
-        <h4>Area's Best</h4>
-        <div class="col s3 ">
-          <div class="card">
-            <div class="card-image">
-              <img
-                src="https://dogtowndogtraining.com/wp-content/uploads/2012/06/300x300-061-e1340955308953.jpg"
-              />
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
-              </p>
-            </div>
-            <div class="card-action">
-              <a href="#">Visit our website</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s3">
-          <div class="card">
-            <div class="card-image">
-              <img
-                src="https://dogtowndogtraining.com/wp-content/uploads/2012/06/300x300-061-e1340955308953.jpg"
-              />
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
-              </p>
-            </div>
-            <div class="card-action">
-              <a href="#">Visit our website</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s3">
-          <div class="card">
-            <div class="card-image">
-              <img
-                src="https://dogtowndogtraining.com/wp-content/uploads/2012/06/300x300-061-e1340955308953.jpg"
-              />
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
-              </p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s3">
-          <div class="card">
-            <div class="card-image">
-              <img
-                src="https://dogtowndogtraining.com/wp-content/uploads/2012/06/300x300-061-e1340955308953.jpg"
-              />
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="card-content">
-              <p>
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
-              </p>
-            </div>
-            <div class="card-action">
-              <a href="#">Visit our website</a>
-            </div>
-          </div>
-        </div>
+      <div class="row areas-best hide">
+        <h4 class="white-text">Area's Best</h4>
       </div>
     </div>
 
@@ -322,6 +319,7 @@
           </div>
         </div>
       </div>
+
       <div class="footer-copyright">
         <div class="container">
           <div class="row">

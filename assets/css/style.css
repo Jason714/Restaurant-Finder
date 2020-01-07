@@ -11,8 +11,11 @@ body {
 
 .brand-logo {
     font-family: 'Dancing Script', cursive, Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 2%;
     font-weight: 800;
+}
+
+.nav-logo {
+    margin-left: 2%;
 }
 
 li {
@@ -24,6 +27,13 @@ li {
 .container {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.description {
+    background-image: linear-gradient(130deg, rgba(178, 190, 195, .9), rgba(223, 230, 233, .9), rgba(178, 190, 195, .9));
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 /**Carousel**/
@@ -41,6 +51,16 @@ li {
     text-align: center;
 }
 
+.large {
+    height: 400px;
+}
+
+/**Areas best**/
+
+.thumb {
+    height: 200px;
+}
+
 /**Footer**/
 
 footer {
@@ -53,8 +73,4 @@ footer {
 
 .team {
     margin-top: 30px;
-}
-
-img {
-    height: 400px;
 }
