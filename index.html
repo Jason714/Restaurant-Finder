@@ -17,7 +17,10 @@
       href="https://fonts.googleapis.com/css?family=Dancing+Script|Inria+Serif&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
+
   </head>
 
   <body>
@@ -290,6 +293,87 @@
 
       <div class="row areas-best hide">
         <h4 class="white-text">Area's Best</h4>
+        <!-- card area -->
+        <div class="col s4 search-results">
+              <div class="col">
+              <div class="card">
+              <div class="card-image"><img class="thumb" src="${detail.photo.images.small.url}"/>
+              <span class="card-title">${detail.name}</span>
+              </div>
+              <div class="card-content">
+              <p>Cuisine: ${detail.cuisine[0].name}</p>
+              <p>${detail.location_string}</p>
+              <p>Rating: ${detail.rating}</p>
+              <p>Price range: ${detail.price}</p>   
+              </div>
+              <div class="card-action">
+              <a href="${detail.website}">Visit our website</a>
+              <a href="${detail.web_url}#REVIEWS">Read our reviews</a>
+              </div>
+              </div>
+              </div>
+
+              <div class="col">
+                <div class="card">
+                <div class="card-image"><img class="thumb" src="${detail.photo.images.small.url}"/>
+                <span class="card-title">${detail.name}</span>
+                </div>
+                <div class="card-content">
+                <p>Cuisine: ${detail.cuisine[0].name}</p>
+                <p>${detail.location_string}</p>
+                <p>Rating: ${detail.rating}</p>
+                <p>Price range: ${detail.price}</p>   
+                </div>
+                <div class="card-action">
+                <a href="${detail.website}">Visit our website</a>
+                <a href="${detail.web_url}#REVIEWS">Read our reviews</a>
+                </div>
+                </div>
+                </div>
+
+                <div class="col">
+                  <div class="card">
+                  <div class="card-image"><img class="thumb" src="${detail.photo.images.small.url}"/>
+                  <span class="card-title">${detail.name}</span>
+                  </div>
+                  <div class="card-content">
+                  <p>Cuisine: ${detail.cuisine[0].name}</p>
+                  <p>${detail.location_string}</p>
+                  <p>Rating: ${detail.rating}</p>
+                  <p>Price range: ${detail.price}</p>   
+                  </div>
+                  <div class="card-action">
+                  <a href="${detail.website}">Visit our website</a>
+                  <a href="${detail.web_url}#REVIEWS">Read our reviews</a>
+                  </div>
+                  </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card">
+                    <div class="card-image"><img class="thumb" src="${detail.photo.images.small.url}"/>
+                    <span class="card-title">${detail.name}</span>
+                    </div>
+                    <div class="card-content">
+                    <p>Cuisine: ${detail.cuisine[0].name}</p>
+                    <p>${detail.location_string}</p>
+                    <p>Rating: ${detail.rating}</p>
+                    <p>Price range: ${detail.price}</p>   
+                    </div>
+                    <div class="card-action">
+                    <a href="${detail.website}">Visit our website</a>
+                    <a href="${detail.web_url}#REVIEWS">Read our reviews</a>
+                    </div>
+                    </div>
+                    </div>
+      
+        
+        </div>
+        
+        <!-- map -->
+        <div class="col s8">
+          <div id="map" class="map"></div>
+        </div>
       </div>
     </div>
 
@@ -335,6 +419,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
 
     <script src="assets/js/script.js"></script>
   </body>
