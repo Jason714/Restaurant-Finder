@@ -72,11 +72,16 @@ $(document).ready(function() {
         details.data.splice(6, 1);
         // For loop that takes in the returned data from the API call and uses it to populate HTML elements
         $.each(details.data, function(i, detail) {
+          console.log(detail);
           // Adding markers to the map using the LatLon of each location returned in the API call
           L.marker([
             parseFloat(detail.latitude),
             parseFloat(detail.longitude)
-          ]).addTo(map);
+          ]).addTo(map).bindPopup(`<p class="red-text">${detail.name}</p>
+          <img src="${detail.photo.images.thumbnail.url}"/>
+          <p>Cuisine: ${detail.cuisine[0].name}</p>
+          <p>Price range: ${detail.price}</p>
+          <a target="_blank" href="${detail.website}">Website</a>`);
           // Creating and appending cards to the search-results div
           $(".search-results").append(`
       <div class="col ">
@@ -91,8 +96,8 @@ $(document).ready(function() {
       <p>Price range: ${detail.price}</p>   
       </div>
       <div class="card-action">
-      <a href="${detail.website}">Website</a>
-      <a href="${detail.web_url}#REVIEWS">Our Reviews</a>
+      <a target="_blank" href="${detail.website}">Website</a>
+      <a target="_blank" href="${detail.web_url}#REVIEWS">Our Reviews</a>
       </div>
       </div>
       </div>
