@@ -59,7 +59,7 @@ $(document).ready(function() {
         $.each(details.data, function(i, detail) {
           L.marker([parseFloat(detail.latitude), parseFloat(detail.longitude)]).addTo(map);
           $(".search-results").append(`
-      <div class="col s3">
+      <div class="col ">
       <div class="card">
       <div class="card-image"><img class="thumb" src="${detail.photo.images.small.url}"/>
       <span class="card-title">${detail.name}</span>
