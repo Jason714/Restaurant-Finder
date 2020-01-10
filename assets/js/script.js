@@ -10,7 +10,7 @@ $(document).ready(function() {
     setTimeout(autoplay, 15000);
   }
 
-  var map = L.map("map").setView([51.505, -0.09], 13);
+  var map = L.map("map")
   var marker = L.marker([51.5, -0.09]).addTo(map);
   L.tileLayer("https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png", {
     attribution:
@@ -18,8 +18,7 @@ $(document).ready(function() {
     maxZoom: 18
   }).addTo(map);
 
-
-
+ 
   $(".search").on("click", function() {
     var searchLocation = $(".location")
       .val()
@@ -28,19 +27,22 @@ $(document).ready(function() {
     $(".favs").addClass("hide");
     $(".about").addClass("hide");
     $(".areas-best").removeClass("hide");
-    // $.ajax({
-    //   async: true,
-    //   crossDomain: true,
-    //   url:
-    //     "https://tripadvisor1.p.rapidapi.com/locations/search?query=" +
-    //     searchLocation +
-    //     "&lang=en_US&units=mi",
-    //   method: "GET",
-    //   headers: {
-    //     "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-    //     "x-rapidapi-key": apiKEY
-    //   }
-    // }).done(function(location) {
+    $.ajax({
+      async: true,
+      crossDomain: true,
+      url:
+        "https://tripadvisor1.p.rapidapi.com/locations/search?query=" +
+        searchLocation +
+        "&lang=en_US&units=mi",
+      method: "GET",
+      headers: {
+        "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
+        "x-rapidapi-key": apiKEY
+      }
+
+    }).done(function(location) {
+      
+      map.setView([parseFloat(location.data[0].result_object.latitude), parseFloat(location.data[0].result_object.longitude)], 13);
     //   $.ajax({
     //     async: true,
     //     crossDomain: true,
@@ -76,6 +78,6 @@ $(document).ready(function() {
     //   `);
     //     });
     //   });
-    // });
+    });
   });
 });
