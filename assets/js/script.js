@@ -10,15 +10,14 @@ $(document).ready(function() {
     setTimeout(autoplay, 15000);
   }
 
-  var map = L.map("map")
-  
+  var map = L.map("map");
+
   L.tileLayer("https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png", {
     attribution:
       '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 18
   }).addTo(map);
 
- 
   $(".search").on("click", function() {
     var searchLocation = $(".location")
       .val()
@@ -39,10 +38,14 @@ $(document).ready(function() {
         "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
         "x-rapidapi-key": apiKEY
       }
-
     }).done(function(location) {
-      
-      map.setView([parseFloat(location.data[0].result_object.latitude), parseFloat(location.data[0].result_object.longitude)], 10);
+      map.setView(
+        [
+          parseFloat(location.data[0].result_object.latitude),
+          parseFloat(location.data[0].result_object.longitude)
+        ],
+        10
+      );
       $.ajax({
         async: true,
         crossDomain: true,
@@ -57,7 +60,10 @@ $(document).ready(function() {
       }).done(function(details) {
         details.data.splice(6, 1);
         $.each(details.data, function(i, detail) {
-          L.marker([parseFloat(detail.latitude), parseFloat(detail.longitude)]).addTo(map);
+          L.marker([
+            parseFloat(detail.latitude),
+            parseFloat(detail.longitude)
+          ]).addTo(map);
           $(".search-results").append(`
       <div class="col ">
       <div class="card">
@@ -71,8 +77,8 @@ $(document).ready(function() {
       <p>Price range: ${detail.price}</p>   
       </div>
       <div class="card-action">
-      <a href="${detail.website}">Visit our website</a>
-      <a href="${detail.web_url}#REVIEWS">Read our reviews</a>
+      <a href="${detail.website}">Our Website</a>
+      <a href="${detail.web_url}#REVIEWS">Our Reviews</a>
       </div>
       </div>
       </div>
