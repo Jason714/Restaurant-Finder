@@ -10,18 +10,13 @@ $(document).ready(function() {
     setTimeout(autoplay, 15000);
   }
 
-  var map = new ol.Map({
-    target: 'map',
-    layers: [
-      new ol.layer.Tile({
-        source: new ol.source.OSM()
-      })
-    ],
-    view: new ol.View({
-      center: ol.proj.fromLonLat([37.41, 8.82]),
-      zoom: 16
-    })
-  });
+  var map = L.map("map").setView([51.505, -0.09], 13);
+  var marker = L.marker([51.5, -0.09]).addTo(map);
+  L.tileLayer("https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18
+  }).addTo(map);
 
 
 
