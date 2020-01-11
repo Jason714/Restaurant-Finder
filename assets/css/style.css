@@ -1,85 +1,99 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inria Serif', serif, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-image: url(https://antonialoweinteriors.com/wp-content/uploads/2018/04/B.jpg);
+  font-family: "Inria Serif", serif, Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
+  background-image: url(https://antonialoweinteriors.com/wp-content/uploads/2018/04/B.jpg);
 }
 
 /**Navbar**/
 
 .brand-logo {
-    font-family: 'Dancing Script', cursive, Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 800;
+  font-family: "Dancing Script", cursive, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 800;
 }
 
 .nav-logo {
-    margin-left: 2%;
+  margin-left: 2%;
 }
 
 li {
-    margin-right: 2%;
+  margin-right: 2%;
 }
 
 /**Main content**/
 
 .container {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .description {
-    background-image: linear-gradient(130deg, rgba(178, 190, 195, .9), rgba(223, 230, 233, .9), rgba(178, 190, 195, .9));
-    font-size: 18px;
-    border-radius: 5px;
-    padding: 5px;
+  background-image: linear-gradient(
+    130deg,
+    rgba(178, 190, 195, 0.9),
+    rgba(223, 230, 233, 0.9),
+    rgba(178, 190, 195, 0.9)
+  );
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 /**Carousel**/
 
 .carousel-area {
-    background-image: linear-gradient(130deg, rgba(223, 230, 233, .6), rgba(178, 190, 195, .6), rgba(99, 110, 114, .6));
-    padding: 10px;
+  background-image: linear-gradient(
+    130deg,
+    rgba(223, 230, 233, 0.6),
+    rgba(178, 190, 195, 0.6),
+    rgba(99, 110, 114, 0.6)
+  );
+  padding: 10px;
 }
 
 .carousel {
-    height: 470px;
+  height: 470px;
 }
 
 .car-content {
-    text-align: center;
+  text-align: center;
 }
 
 .large {
-    height: 400px;
+  height: 400px;
 }
 
 /**Areas best**/
 
 .thumb {
-    height: 200px;
+  height: 200px;
+}
+
+.search-results {
+  max-height: 450px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+/**Map**/
+.map {
+  height: 450px;
+  width: 100%;
 }
 
 /**Footer**/
 
 footer {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .copyright {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .team {
-    margin-top: 30px;
+  margin-top: 30px;
 }
-.search-results{
-    max-height: 450px;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-.map {
-    height: 450px;
-    width: 100%;
-  }

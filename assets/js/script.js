@@ -77,6 +77,7 @@ $(document).ready(function() {
           L.marker([
             parseFloat(detail.latitude),
             parseFloat(detail.longitude)
+            // Adding a popup to the pins on the map and appending their content
           ]).addTo(map).bindPopup(`<p class="red-text">${detail.name}</p>
           <img src="${detail.photo.images.thumbnail.url}"/>
           <p>Cuisine: ${detail.cuisine[0].name}</p>
