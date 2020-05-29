@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Variable to be called in AJAX calls that holds the API key
   var apiKEY = "3c1dabb7e8msh3a8cf7c4e6c37afp1d07e5jsn032c5f9b3ffe";
   // Function to open the modal when the search button is clicked
@@ -18,15 +18,13 @@ $(document).ready(function() {
   L.tileLayer("https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png", {
     attribution:
       '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 18
+    maxZoom: 18,
   }).addTo(map);
   // Click event for search that's inside the modal
-  $(".search").on("click", function() {
+  $(".search").on("click", function () {
+    $(".search-results").empty();
     // Variable that gets the value of the input, the api required %20 to represent a space in a string so string values are split on spaces and concatinated with %20
-    var searchLocation = $(".location")
-      .val()
-      .split(" ")
-      .join("%20");
+    var searchLocation = $(".location").val().split(" ").join("%20");
     // Adding hide class to favs div
     $(".favs").addClass("hide");
     // Adding hide class to about div
@@ -44,14 +42,14 @@ $(document).ready(function() {
       method: "GET",
       headers: {
         "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-        "x-rapidapi-key": apiKEY
-      }
-    }).done(function(location) {
+        "x-rapidapi-key": apiKEY,
+      },
+    }).done(function (location) {
       // Setting the map center to the LatLon returned from the location search
       map.setView(
         [
           parseFloat(location.data[0].result_object.latitude),
-          parseFloat(location.data[0].result_object.longitude)
+          parseFloat(location.data[0].result_object.longitude),
         ],
         10
       );
@@ -65,22 +63,21 @@ $(document).ready(function() {
         method: "GET",
         headers: {
           "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-          "x-rapidapi-key": apiKEY
-        }
-      }).done(function(details) {
+          "x-rapidapi-key": apiKEY,
+        },
+      }).done(function (details) {
         // Removing index[6] because it is an AD
         details.data.splice(6, 1);
         // For loop that takes in the returned data from the API call and uses it to populate HTML elements
-        $.each(details.data, function(i, detail) {
+        $.each(details.data, function (i, detail) {
           console.log(detail);
           // Adding markers to the map using the LatLon of each location returned in the API call
           L.marker([
             parseFloat(detail.latitude),
-            parseFloat(detail.longitude)
+            parseFloat(detail.longitude),
             // Adding a popup to the pins on the map and appending their content
           ]).addTo(map).bindPopup(`<p class="red-text">${detail.name}</p>
           <img src="${detail.photo.images.thumbnail.url}"/>
-          <p>Cuisine: ${detail.cuisine[0].name}</p>
           <p>Price range: ${detail.price}</p>
           <a target="_blank" href="${detail.website}">Website</a>`);
           // Creating and appending cards to the search-results div
@@ -91,7 +88,6 @@ $(document).ready(function() {
       <span class="card-title">${detail.name}</span>
       </div>
       <div class="card-content">
-      <p>Cuisine: ${detail.cuisine[0].name}</p>
       <p>${detail.location_string}</p>
       <p>Rating: ${detail.rating}</p>
       <p>Price range: ${detail.price}</p>   
